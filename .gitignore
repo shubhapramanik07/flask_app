@@ -1,0 +1,51 @@
+venv/
+__pycache__/
+*.pyc
+.env
+```
+
+3. **Add and Commit your files**:
+```bash
+git add .
+git commit -m "Initial commit: Flask application"
+```
+
+4. **Create a new repository on GitHub**:
+- Go to [GitHub](https://github.com)
+- Click the '+' icon and select 'New repository'
+- Name your repository (e.g., "flask-app")
+- Don't initialize with README
+- Click 'Create repository'
+
+5. **Link and Push to GitHub** (replace `YOUR-USERNAME` with your GitHub username):
+```bash
+git remote add origin https://github.com/YOUR-USERNAME/flask-app.git
+git branch -M main
+git push -u origin main
+```
+
+Additional tips:
+- Make sure you're logged into GitHub in your terminal
+- If you haven't set up Git credentials, you might be prompted to login
+- Consider adding a README.md file to document your project:
+
+````markdown
+// filepath: c:\Users\shubh\OneDrive\Desktop\flask\README.md
+# Flask Application
+
+A simple Flask application with various endpoints including:
+- Welcome message
+- Dynamic greetings
+- Calculator functionality
+- HTML template rendering
+
+## Setup
+1. Create virtual environment
+2. Install requirements: `pip install flask`
+3. Run the application: `python app.py`
+
+## Endpoints
+- `/` - Welcome page
+- `/greet/<name>` - Personalized greeting
+- `/calc/add` - Addition calculator
+- `/results/<marks>
