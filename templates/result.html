@@ -1,0 +1,17 @@
+<html>
+    <h2>final results</h2>
+    <body>
+     {% if result >= 50 %}
+    {# in the above line we are checking if the result is greater than or equal to 50 and it should be in double curly braces #}
+    
+        <h1 style='color:green;'>The Result is passed</h1>
+     {% else %}
+        <h1 style='color:red;'>The Result is failed</h1>
+     {% endif %}
+
+    <h3>Your Score is: {{result}}</h3>
+    <p>Thank you for participating!</p>
+    <a href="{{ url_for('welcome') }}">Go back to the home page</a>
+
+    </body>
+</html>

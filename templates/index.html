@@ -1,6 +1,35 @@
+<!DOCTYPE html>
 <html>
-  <body>
-<h1 style="color: rgb(41, 141, 161);">Welcome to my YouTube Channel</h1>
+<head>
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script>
+      alert("This page has been loaded");
+    </script>
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
 
-  </body>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="science">Science:</label><br>
+        <input type="number" id="science" name="science" value="0" required><br>
+        
+        <label for="maths">Maths:</label><br>
+        <input type="number" id="maths" name="maths" value="0" required><br>
+        
+        <label for="c">C:</label><br>
+        <input type="number" id="c" name="c" value="0" required><br>
+        
+        <label for="data_science">Data Science:</label><br>
+        <input type="number" id="data_science" name="data_science" value="0" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form> 
+
+    <p>Click "Submit" to calculate your grade.</p>
+
+    {% if grade is not none %}
+    <h3>Your Grade: {{ grade }}</h3>
+    {% endif %}
+</body>
 </html>
